@@ -2,12 +2,12 @@
   "name": "test PWA",
   "short_name": "test PWA",
   "display": "standalone",
-  "start_url": "/",
+  "start_url": "./",
   "theme_color": "#8888ff",
   "background_color": "#aaaaff",
   "icons": [
     {
-      "src": "m.png",
+      "src": "./m.png",
       "sizes": "256x256",
       "type": "image/png"
     }
