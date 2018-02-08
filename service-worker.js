@@ -1,12 +1,12 @@
-const cacheName = 'wulv-tsst-v0.0.7';
+const cacheName = 'wulv-tsst-v0.0.1';
 const filesToCache = [
   './',
   './index.html',
   './css/main.css',
   './js/app.js'
 ];
-console.log(1);
 // 用户首次访问页面时将会触发安装事件
+// 缓存资源
 self.addEventListener('install', function(e) {
   console.log('[ServiceWorker] 安装');
   e.waitUntil(
@@ -21,6 +21,7 @@ self.addEventListener('install', function(e) {
   );
 });
 // 事件会在服务工作线程启动时触发。
+// 检查更新
 self.addEventListener('activate', function(e) {
   console.log('[ServiceWorker] Activate');
   e.waitUntil(
@@ -35,7 +36,7 @@ self.addEventListener('activate', function(e) {
   );
   return self.clients.claim();
 });
-
+// 拦截网络请求 , 从缓存内读取资源
 self.addEventListener('fetch', function(e) {
   console.log('[ServiceWorker] Fetch', e.request.url);
   e.respondWith(
