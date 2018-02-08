@@ -1,4 +1,4 @@
-const cacheName = 'wulv-tsst-v0.0.2';
+const cacheName = 'wulv-tsst-v0.0.3';
 const filesToCache = [
   './',
   './index.html',
