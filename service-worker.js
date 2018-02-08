@@ -1,9 +1,10 @@
-const cacheName = 'wulv-tsst-v0.0.1';
+const cacheName = 'wulv-tsst-v0.0.2';
 const filesToCache = [
   './',
   './index.html',
   './css/main.css',
-  './js/app.js'
+  './js/app.js',
+  './m.png'
 ];
 // 用户首次访问页面时将会触发安装事件
 // 缓存资源
